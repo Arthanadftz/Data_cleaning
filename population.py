@@ -69,4 +69,6 @@ for column in columns_to_clear:
   plt.ylabel('State')
   plt.show()
 
+us_census['Unnamed: 0'] = range(len(us_census))
+us_census = us_census.set_index('Unnamed: 0')
 us_census.to_csv('Us_census.csv')
